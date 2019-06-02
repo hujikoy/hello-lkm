@@ -14,7 +14,7 @@ $ sudo rmmod hello-lkm
 $ gcc -o main_user main_user.c
 $ ./main_user
 ```
-If you get `Segmentation fault (core dumped)` after running the main_user, it's probably because the rmdpc is not allowed. It might due to the protection principles done by shell, please see more information in the (github issue)[https://github.com/EEESlab/examon/issues/2#issuecomment-407695762].
+If you get `Segmentation fault (core dumped)` after running the main_user, it's probably because the rmdpc is not allowed. It might due to the protection principles done by shell, please see more information in the [github issue](https://github.com/EEESlab/examon/issues/2#issuecomment-407695762).
 For simply remove this protection, do this:
 ```shell
 $ sudo sh -c "echo '2' > /sys/bus/event_source/devices/cpu/rdpmc"
