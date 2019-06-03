@@ -30,3 +30,5 @@ In my case, when I use `dmesg | tail -5` to see what actually happened, I get:
 ```shell
 Lockdown: insmod: Loading of unsigned module is restricted; see man kernel_lockdoen.7
 ```
+Then I check the configuration of my BIOS setting, I found my PC's Secure Boot is `enabled`, so I turned it off.
+After I restart the PC, I installed the module successfully.
