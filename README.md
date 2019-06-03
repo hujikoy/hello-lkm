@@ -19,3 +19,14 @@ For simply remove this protection, do this:
 ```shell
 $ sudo sh -c "echo '2' > /sys/bus/event_source/devices/cpu/rdpmc"
 ```
+
+### problem about `insmod`
+If you get
+```shell
+insmod: ERROR: could not insert module simple-lkm.ko: Operation not permited
+```
+when you try `sudo insmod simple-lkm.ko` after you build the module, it is probably because your BIOS setting.
+In my case, when I use `dmesg | tail -5` to see what actually happened, I get:
+```shell
+Lockdown: insmod: Loading of unsigned module is restricted; see man kernel_lockdoen.7
+```

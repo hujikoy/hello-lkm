@@ -1,4 +1,4 @@
-obj-m += hello-lkm.o
+obj-m += simple-lkm.o
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
 clean:
