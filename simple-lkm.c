@@ -15,7 +15,7 @@ int my_module_init(void)
 // Cleanup function called on module exit
 void my_module_cleanup(void)
 {
-    printk(KERN_INFO "my_module_cleanup called. Module is now unloaded.\n")
+    printk(KERN_INFO "my_module_cleanup called. Module is now unloaded.\n");
     return;
 }
 
